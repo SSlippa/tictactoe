@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Tic Tac Toe</h1>
+
+  <div class="controls-button">
+    <button pButton type="button" class="p-button-raised p-button-text" label="Start game" (click)="startGame()"></button>
+    <p-selectButton [disabled]="isGameActive" [options]="options" [(ngModel)]="gameMode"></p-selectButton>
+  </div>
+
+  <h3 *ngIf="isGameActive">Current turn player is {{currentSign}}</h3>
+
+  <h2 *ngIf="winner" style="color: red;">The Winner is - {{winner}}</h2>
+
+  <div class="desk" [class.disabled]="!isGameActive">
+    <div *ngFor="let cell of gameDesk" (click)="onCellClick(cellRef, cell.position)" data-coord="{{cell.position}}" #cellRef class="cell"></div>
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .controls-button {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+  }
+
+  .desk {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 210px;
+
+    &.disabled {
+      background-color: rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+    }
+
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      width: 70px;
+      height: 70px;
+      border: 1px solid black;
+
+      &:hover {
+        background-color: lightgray;
+      }
+    }
+  }
+
+
+}
+
